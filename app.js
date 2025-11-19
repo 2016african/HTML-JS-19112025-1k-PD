@@ -13,7 +13,7 @@ function handleClick() {
     const height = Number(textinputtwo.value); 
 
     let KMI = weight / (height * height);
-    KMI = KMI.toFixed(1);
+    KMI = KMI.toFixed(1);  
 
    
     if (KMI < 18.5) {
@@ -31,7 +31,7 @@ function handleClick() {
 
     
     let li = document.createElement('li');
-    li.innerHTML = " Jūsu KMI ir " + KMI + " Masa : " + textinput.value + " Augums : " + textinputtwo.value;
+    li.innerHTML = " Jūsu KMI ir " + KMI + " Masa : " + textinput.value+ "KG" + " Augums : " + textinputtwo.value + "cm";
     historyList.appendChild(li);
 }
 
