@@ -19,10 +19,10 @@ function handleClick() {
     if (KMI < 18.5) {
         output.innerHTML = KMI + " (Nepietiekama ķermeņa masa)";
     } 
-    else if (KMI <= 18.5) {
+    else if (KMI <= 25) {
         output.innerHTML = KMI + " (Normāla ķermeņa masa)";
     } 
-    else if (KMI <= 25) {
+    else if (KMI <= 29.99) {
         output.innerHTML = KMI + " (Lieka ķermeņa masa)";
     } 
     else {
