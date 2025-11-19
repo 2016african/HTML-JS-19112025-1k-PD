@@ -27,9 +27,15 @@ function handleClick() {
     } 
     else {
         output.innerHTML = KMI + " (Aptaukošanās)";
-    }
+    };
 
+    
+    let li = document.createElement('li');
+    li.innerHTML = " Jūsu KMI ir " + KMI + " Masa : " + textinput.value + " Augums : " + textinputtwo.value;
+    historyList.appendChild(li);
 }
+
+
 
 
 
