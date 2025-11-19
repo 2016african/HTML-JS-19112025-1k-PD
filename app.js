@@ -1,40 +1,35 @@
 console.log("Loaded JS");
 
-const textinput = document.getElementById("textinput");
-const textinputtwo = document.getElementById("textinputtwo");
+const textinput = document.getElementById("textinput");      
+const textinputtwo = document.getElementById("textinputtwo"); 
 const button = document.getElementById("button");
 const output = document.getElementById("output");
-
+const historyList = document.getElementById("history")
 
 button.addEventListener('click', handleClick);
 
 function handleClick() {
-let KMI = textinput.value / ( textinputtwo.value * textinputtwo.value );
+    const weight = Number(textinput.value);
+    const height = Number(textinputtwo.value); 
 
-if ( KMI <   18,5 ) {
-output.innerHTML = (KMI + "  (Nepietiekama ķermeņa masa )");
+    let KMI = weight / (height * height);
+    KMI = KMI.toFixed(1);
+
+   
+    if (KMI < 18.5) {
+        output.innerHTML = KMI + " (Nepietiekama ķermeņa masa)";
+    } 
+    else if (KMI <= 18.5) {
+        output.innerHTML = KMI + " (Normāla ķermeņa masa)";
+    } 
+    else if (KMI <= 25) {
+        output.innerHTML = KMI + " (Lieka ķermeņa masa)";
+    } 
+    else {
+        output.innerHTML = KMI + " (Aptaukošanās)";
+    }
+
 }
-
-else 
-    if ( KMI >+ 24,99) {
-    output.innerHTML = (KMI + "  (Normāla ķermeņa masa )");
-}
-else 
-    if ( KMI >+ 29,99) {
-    output.innerHTML = (KMI + "  (Lieka ķermeņa masa)");
-}
-else 
-    if ( KMI > 30) {
-    output.innerHTML = (KMI + "  (Aptaukošanās )");
-};
-
-};
- 
-
-
-
-
-
 
 
 
